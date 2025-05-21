@@ -5,119 +5,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./lib/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./lib/bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
-
-
-
-
-
-    <title>CocoRemedy</title>
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/technologies.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <title>PeakFinder</title>
 </head>
 
 <body style="background-color: #E9F7EF">
-    <!-- NavBar -->
+    <!-- Modern NavBar -->
     <nav id="navmenu" class="navbar navbar-expand-lg sticky-top">
-        <a class="navbar-brand" href="#home">
-            <img src="./Images/logo/icon.png" width="30" height="30" class="d-inline-block align-top"  loading="lazy">
-            <span>CocoRemedy</span></br>
-        </a>
-        <button id="nav-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span id="nav-toggle-icon" class="fas fa-ellipsis-v"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul id="navmenu-links" class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Project Scope
-              </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#project-scope">Literature Survey</a>
-                        <a class="dropdown-item" href="#research_gap">Research Gap</a>
-                        <a class="dropdown-item" href="#research_problem">Research Problem & Solution</a>
-                        <a class="dropdown-item" href="#research_objectives">Research Objectives</a>
-                        <a class="dropdown-item" href="#methodology">Methodology</a>
-                        <a class="dropdown-item" href="#tech_used">Technologies</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#milestones">Milestones</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Downloads
-                </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#downloads">Documents</a>
-                        <a class="dropdown-item" href="#presentations">Presentations</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#achievements">Achievements</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Home -->
-    <section id="home">
         <div class="container">
-            <div class="hero-cta">
-                <h1>Coconut Pest and Disease <br/>Surveillance System</h1>
-                <a class="btn btn-outline-light" type="button" href="#project-scope"><span class="btn-text">Learn More</span><span class="fas fa-chevron-right btn-icon"></span></a>
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <div class="brand-logo">
+                    <img src="./Images/logo/icon.png" width="30" height="30" loading="lazy" alt="CocoRemedy Logo">
+                </div>
+                <span class="brand-text">PeakFinder</span>
+            </a>
+            <button id="nav-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span id="nav-toggle-icon" class="fas fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-seedling mr-2"></i>
+                            <span>Project Scope</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#project-scope">
+                                <i class="fas fa-book-open mr-3"></i>
+                                <span>Literature Survey</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#research_gap">
+                                <i class="fas fa-search mr-3"></i>
+                                <span>Research Gap</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#research_problem">
+                                <i class="fas fa-lightbulb mr-3"></i>
+                                <span>Research Problem & Solution</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#research_objectives">
+                                <i class="fas fa-bullseye mr-3"></i>
+                                <span>Research Objectives</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#methodology">
+                                <i class="fas fa-tasks mr-3"></i>
+                                <span>Methodology</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#tech_used">
+                                <i class="fas fa-microchip mr-3"></i>
+                                <span>Technologies</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#milestones">Milestones</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="downloadsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-download mr-2"></i>
+                            <span>Downloads</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadsDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#downloads">
+                                <i class="fas fa-file-alt mr-3"></i>
+                                <span>Documents</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#presentations">
+                                <i class="fas fa-presentation mr-3"></i>
+                                <span>Presentations</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#about">
+                            <i class="fas fa-users mr-2"></i>
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#achievements">
+                            <i class="fas fa-trophy mr-2"></i>
+                            <span>Achievements</span>
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#contact">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home">
+        <!-- Video Background -->
+        <div class="hero-cover">
+            <video autoplay loop muted playsinline>
+                <source src="vedio/Vecteezy Drone-Flying-Over-The-Mountain-Peaks-With-Fog 2019265.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="container">
+                <h1>Discover Majestic Peaks</h1>
+                <p class="lead">Your ultimate guide to exploring the world's most breathtaking mountain ranges and hiking trails.</p>
+                <div class="hero-buttons">
+                    <a href="#project-scope" class="btn btn-primary">
+                        <i class="fas fa-mountain"></i>Explore Trails
+                    </a>
+                    <a href="#about" class="btn btn-outline-primary">
+                        <i class="fas fa-info-circle"></i>Learn More
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="hero-cover">
-            <img class="spotlight-image" src="./Images/other/skeleton.png" />
-            <img class="hero-image" src="./Images/other/background.jpg" />
+
+
         </div>
-    </section>
+    </section> 
+
+
+
     <!-- project-scope -->
     <section id="project-scope" class="main-sections" style="background-color:#FDFEFE">
         <div class="container">
             <h5 class="section-headings">Project Scope</h5>
             <!-- Literature Survey -->
             <div id="literature" class="sub-section">
-                <h2>Literature Survey</h2>
-                <div class="row">
-                    <div id="project-scope-left" class="col-md-6 col-sm-12 pt-lg-5">
-                        <div class="section-left">
-                            <div class="section-info-div">
-                                <div class="row">
-                                    <div class="col-sm-5"><img src="./Images/lit/4.png" width="60%" /></div>
-                                    <div class="col-sm-7 text-col">Sri lanka is the 4th largest coconut exporter in the world <span style="color: grey; font-size: 12px;">[1]</span style="color: grey; font-size: 12px;"></div>
-                        </div>
-                      </div>
-                      <div class="section-figure " >
-                        <img style="align-items:center" src="./Images/lit/stat.jpg" width="80%"/>
-                        <p>Figure 1. Annual coconut production 2011 - 2021	[1]</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="project-scope-right" class="col-md-6 col-sm-12 pt-lg-5 justify-text">
-					<p>Agriculture and related industries employed more than a quarter of the Sri Lankan workforce by the year 2019 [1]. However, due to frequent changes in climatic conditions, disease spread has increased resulting in severe crop losses in Sri Lankan cultivation [1]. Disease and pest identification and assessment techniques based on learning features automatically to collect valuable information will be sustainable in the future [2]. According to Sladojevic et. al. neural networks can extract patterns and identify trends that are too complex for humans or computer systems to notice [3]. This has been proved by a study that proposed a Convolutional Neural Network (CNN) based model responsible for detecting leaves and distinguishing between healthy and diseased leaves of 13 diseases with an overall accuracy of 96.3% [3]. </p>
-				   <p>The author, Chandy [2] proposed a system for identifying coconut disease and pest infestations using deep learning techniques, in which symptoms are identified by using a drone that will fly through the coconut lands to capture images. It will identify the pest infestation by processing the images using deep learning and image processing. Finally, the result is sent to the user’s mobile phone using WIFI [2].  </p>
-                    <div class="references">
-                      <p class="pt-sm-1"><strong>References</strong></p>
-                      <ol>
-                        <li>R. Miriyagalla, Y. Samarawickrama, D. Rathnaweera, L. Liyanage, D. Kasthurirathna, D. Nawinna, and J. L. Wijekoon, “On the effectiveness of using machine learning and Gaussian Plume model for plant disease dispersion prediction and simulation,” International Conference on Advancements in Computing, ICAC 2019,.
-                        <li>A. Chandy, “Pest infestation identification in coconut trees using deep learning,” Journal of Artificial Intelligence and Capsule Networks, vol. 01, no. 01, pp. 10–18, 2019.</li>
-                        <li>S. Sladojevic, M. Arsenovic, A. Anderla, D. Culibrk, and D. Stefanovic, “Deep Neural Networks based recognition of plant diseases by Leaf Image Classification,” Computational Intelligence and Neuroscience, vol. 2016, pp. 1–11, 2016.</li>
-                      </ol>
-                    </div>
-                  </div>
+                <h2 class=" ">Literature Survey</h2>
+                <div class="literature-intro mb-5 ">
+                    <p class="lead text-center">Hiking assistance systems have been extensively studied, with early research laying the groundwork for understanding their impact on hiking safety and efficiency [1]. Inspired by structured project management methodologies, modern hiking assistance systems follow a comprehensive approach to navigation, safety, and resource management [2].</p>
                 </div>
-            </div>
+
+                <div class="literature-cards">
+                    <!-- Card 1: Real-Time Mountain Recognition -->
+                    <div class="card literature-card mb-4">
+                        <div class="card-header">
+                            <h4><i class="fas fa-mountain mr-2"></i>Real-Time Mountain Recognition</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Deep learning, particularly Convolutional Neural Networks (CNNs), has revolutionized geographic feature recognition, offering superior accuracy in classifying natural landscapes compared to traditional methods like SIFT and SURF [3]. MobileNetV2's efficient architecture, featuring depth-wise separable convolutions, makes it ideal for real-time mobile applications, performing comparably to larger models while being optimized for low-power devices [4].</p>
+                            <div class="literature-highlight">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Transfer learning with pre-trained models like MobileNetV2 significantly enhances classification accuracy for specialized tasks, reducing the need for large datasets [5][6].</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Geolocation and Mapping -->
+                    <div class="card literature-card mb-4">
+                        <div class="card-header">
+                            <h4><i class="fas fa-map-marked-alt mr-2"></i>Geolocation and Mapping</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Modern hiking applications leverage interactive maps with real-time trail recognition and collective mapping features [7]. The integration of React Native for front-end development, Firebase for real-time data management, and Google APIs provides a scalable platform for building responsive mapping applications [8][9].</p>
+                            <div class="literature-highlight">
+                                <i class="fas fa-route"></i>
+                                <span>Enhanced route-sharing capabilities and real-time trail updates significantly improve user collaboration and trail management [10].</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Geospatial Data Analysis -->
+                    <div class="card literature-card mb-4">
+                        <div class="card-header">
+                            <h4><i class="fas fa-chart-line mr-2"></i>Geospatial Data Analysis</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Advanced machine learning models, particularly LSTM networks, have significantly improved travel time estimation by accounting for variables like terrain, weather, and hiker fitness levels [11]. These models dynamically compute journey times using real-time parameters, offering more accurate predictions than traditional rule-based approaches like Naismith's Rule [12].</p>
+                            <div class="literature-highlight">
+                                <i class="fas fa-clock"></i>
+                                <span>Integration of real-time environmental data and user-specific parameters enhances prediction accuracy for hiking duration and difficulty [13].</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: WiFi Mesh Networks -->
+                    <div class="card literature-card mb-4">
+                        <div class="card-header">
+                            <h4><i class="fas fa-wifi mr-2"></i>WiFi Mesh Networks</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Decentralized Wi-Fi mesh networks provide reliable communication in remote areas, enabling real-time hazard reporting and route sharing [14]. The use of ESP32 modules with enhanced processing power and signal strength ensures robust connectivity in rugged environments [15].</p>
+                            <div class="literature-highlight">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Mesh networks offer a scalable solution for maintaining connectivity in areas with minimal infrastructure, enhancing hiker safety and experience [16].</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="references   card literature-card mb-4">
+                      <h5 class="mb-8">References</h5>
+                      <ol class="reference-list">
+                          <li>Kerzner, H. (2017). Project Management: A Systems Approach to Planning, Scheduling, and Controlling. Wiley.</li>
+                          <li>Miller, A., & Brown, T. (2021). "Modern Approaches to Hiking Assistance Systems." Journal of Outdoor Recreation, 34(2), 78-95.</li>
+                          <li>Zhang, Y., & Li, X. (2022). "Deep Learning for Geographic Feature Recognition: A Comparative Study." Geospatial Intelligence Review, 18(3), 112-129.</li>
+                          <li>Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L. C. (2018). "MobileNetV2: Inverted Residuals and Linear Bottlenecks." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 4510-4520).</li>
+                          <li>Weiss, K., Khoshgoftaar, T. M., & Wang, D. (2016). "A survey of transfer learning." Journal of Big Data, 3(1), 9.</li>
+                          <li>Tan, M., & Le, Q. (2019). "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks." In International Conference on Machine Learning (pp. 6105-6114).</li>
+                          <li>Wilson, J. P. (2018). "The use of mobile applications in outdoor recreation." Journal of Outdoor Recreation and Tourism, 21, 1-8.</li>
+                          <li>Google Developers. (2023). "Maps Platform." Retrieved from https://developers.google.com/maps</li>
+                          <li>Firebase. (2023). "Realtime Database." Retrieved from https://firebase.google.com/docs/database</li>
+                          <li>Chen, X., & Kwan, M. P. (2020). "Multi-objective route planning for hiking based on crowdsourced data." Transactions in GIS, 24(3), 622-641.</li>
+                          <li>Hochreiter, S., & Schmidhuber, J. (1997). "Long short-term memory." Neural computation, 9(8), 1735-1780.</li>
+                          <li>Naismith, W. W. (1892). "A Method of Determining the Proper Walking Expedition." Scottish Mountaineering Club Journal, 2(4), 125-126.</li>
+                          <li>Kang, J. Y. M., & Gretzel, U. (2021). "Effects of GPS-supported real-time information on hiking experience." Current Issues in Tourism, 24(6), 761-776.</li>
+                          <li>Baccelli, E., Gündoğan, C., Hahm, O., Kietzmann, P., Lenders, M. S., Petersen, H., ... & Wählisch, M. (2019). "RIOT: An Open Source Operating System for Low-end Embedded Devices in the IoT." IEEE Internet of Things Journal, 5(6), 4428-4440.</li>
+                          <li>Espressif Systems. (2023). "ESP32 Series Datasheet." Retrieved from https://www.espressif.com/en/products/socs/esp32</li>
+                          <li>Reynders, B., & Pollin, S. (2016). "Chirp spread spectrum as a modulation technique for long range communication." In 2016 Symposium on Communications and Vehicular Technologies (SCVT) (pp. 1-6). IEEE.</li>
+                      </ol>
+                  </div>
+              </div>
+                </div>
+
+               
             <!-- Research Gap -->
             <div id="research_gap" class="sub-section" >
               <h2>Research Gap</h2>
@@ -318,81 +441,150 @@
               </div>
           </div>
             <!-- Technologies Used -->
-            <div id="tech_used" class="sub-section">
-              <h2>Technologies Used</h2>
-              <div class="row technology mt-5">
-                <div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/python.png" alt="Python">
-                  </div>
-                  <p>Python</p>
+            <section id="tech_used" class="tech-section">
+              <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                  <h5 class="section-subtitle">Our Tech Stack</h5>
+                  <h2 class="section-title">Technologies We Use</h2>
+                  <div class="section-divider"></div>
+                  <p class="section-description">We leverage cutting-edge technologies to deliver high-performance solutions</p>
                 </div>
-                <div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/react.png" alt="React">
+                
+                <div class="tech-grid">
+                  <!-- Tech Item 1 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/python.png" alt="Python">
+                    </div>
+                    <h3>Python</h3>
+                    <div class="tech-hover">
+                      <p>Core programming language for backend and AI/ML</p>
+                    </div>
                   </div>
-                  <p>React</p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/tensorflow.png" alt="Python">
+                  
+                  <!-- Tech Item 2 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/react.png" alt="React">
+                    </div>
+                    <h3>React</h3>
+                    <div class="tech-hover">
+                      <p>Frontend library for building user interfaces</p>
+                    </div>
                   </div>
-                  <p>Tensorflow</p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/keras.png" alt="Keras">
+                  
+                  <!-- Tech Item 3 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/tensorflow.png" alt="TensorFlow">
+                    </div>
+                    <h3>TensorFlow</h3>
+                    <div class="tech-hover">
+                      <p>Open-source platform for machine learning</p>
+                    </div>
                   </div>
-                  <p>Keras</p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/mongo.jpg" alt="MongoDB">
+                  
+                  <!-- Tech Item 4 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/keras.png" alt="Keras">
+                    </div>
+                    <h3>Keras</h3>
+                    <div class="tech-hover">
+                      <p>High-level neural networks API</p>
+                    </div>
                   </div>
-                  <p>MongoDB</p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/firebase.png" alt="Firebase">
+                  
+                  <!-- Tech Item 5 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/mongo.png" alt="MongoDB">
+                    </div>
+                    <h3>MongoDB</h3>
+                    <div class="tech-hover">
+                      <p>NoSQL database for flexible data storage</p>
+                    </div>
                   </div>
-                  <p>Firebase</p>
-                </div>
-				<div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/googlecloud.png" alt="Google Cloud">
+                  
+                  <!-- Tech Item 6 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/firebase.png" alt="Firebase">
+                    </div>
+                    <h3>Firebase</h3>
+                    <div class="tech-hover">
+                      <p>Backend-as-a-Service platform</p>
+                    </div>
                   </div>
-                  <p>Google Cloud</p>
-                </div>
-				<div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/kafka.jpg" alt="Kafka">
+                  
+                  <!-- Tech Item 7 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/googlecloud.png" alt="Google Cloud">
+                    </div>
+                    <h3>Google Cloud</h3>
+                    <div class="tech-hover">
+                      <p>Cloud computing services by Google</p>
+                    </div>
                   </div>
-                  <p>Kafka</p>
-                </div>
-				<div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/doker.png" alt="Doker">
+                  
+                  <!-- Tech Item 8 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/kafka.png" alt="Kafka">
+                    </div>
+                    <h3>Kafka</h3>
+                    <div class="tech-hover">
+                      <p>Distributed event streaming platform</p>
+                    </div>
                   </div>
-                  <p>Doker</p>
-                </div>
-				<div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/colab.png" alt="Google Colab">
+                  
+                  <!-- Tech Item 9 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/doker.png" alt="Docker">
+                    </div>
+                    <h3>Docker</h3>
+                    <div class="tech-hover">
+                      <p>Containerization platform</p>
+                    </div>
                   </div>
-                  <p>Google Colab</p>
-                </div>
-				<div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/googlemap.png" alt="Google map API">
+                  
+                  <!-- Tech Item 10 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="550">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/colab.png" alt="Google Colab">
+                    </div>
+                    <h3>Google Colab</h3>
+                    <div class="tech-hover">
+                      <p>Cloud-based Jupyter notebook environment</p>
+                    </div>
                   </div>
-                  <p>Google map API</p>
-                </div>
-				<div class="col-md-2 col-sm-4 col-6 mb-5">
-                  <div class="avatar">
-                    <img src="./Images/tech/jwt.png" alt="Jwt">
+                  
+                  <!-- Tech Item 11 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/googlemap.png" alt="Google Maps API">
+                    </div>
+                    <h3>Maps API</h3>
+                    <div class="tech-hover">
+                      <p>Interactive maps and location services</p>
+                    </div>
                   </div>
-                  <p>Jwt</p>
+                  
+                  <!-- Tech Item 12 -->
+                  <div class="tech-card" data-aos="fade-up" data-aos-delay="650">
+                    <div class="tech-icon">
+                      <img src="./Images/tech/jwt.png" alt="JWT">
+                    </div>
+                    <h3>JWT</h3>
+                    <div class="tech-hover">
+                      <p>JSON Web Tokens for authentication</p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>
@@ -521,369 +713,411 @@
         </div>
       </section>
       <!-- Downloads -->
-      <section id="downloads" class="main-sections" >
+      <section id="downloads" class="main-sections">
         <div class="container">
-            <h5 class="section-headings">Downloads</h5>
-            <!-- Documents -->
-            <div class="sub-section">
-                <h2>Documents</h2>
-                <p>Please find all documents related to this project below.</p>
-                <div class="row mt-sm-5 downloads-container">
-				 <!-- Topic Assessment -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Topic Assessment</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/02/25</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://drive.google.com/file/d/1bb3MVFdUKWKnGOANRusNcVfQWPL25bHi/view?usp=sharing" target="_blank">Download</a></li>
-                        <!-- <li class="list-group-item">Individual<a href="">Download</a></li> -->
-                      </ul>
-
+            <div class="section-header">
+                <span class="section-subtitle">Download Center</span>
+                <h2 class="section-title">Project Documents</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Access all project-related documents and resources in one place</p>
+            </div>
+            
+            <div class="downloads-grid">
+                <!-- Log Book -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-book-open"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Project Charter -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Project Charter</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/02/25</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://drive.google.com/file/d/1SkZ36rNGmUOqeJ2POyQYl_jagM2NrtV_/view?usp=sharing" target="_blank">Download</a></li>
-                        <!-- <li class="list-group-item">Individual<a href="">Download</a></li> -->
-                      </ul>
-
+                    <div class="download-content">
+                        <h3>Log Book</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Ongoing</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://drive.google.com/file/d/1SkZ36rNGmUOqeJ2POyQYl_jagM2NrtV_/view?usp=sharing" target="_blank" class="download-btn">
+                                Download PDF
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
                     </div>
-                  </div>
-                  <!-- Project Proposal -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Project Proposal</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/03/22</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Individual<a href="https://drive.google.com/drive/folders/1BrImoJHubeT48b5ifj8dLV_JIrXky5Wo?usp=sharing" target="_blank">Download</a></li>
-                      </ul>
+                </div>
 
+                <!-- Project Proposal -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Status Documents -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Status Documents I</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/07/05</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <!-- <li class="list-group-item">Group<a href="">Download</a></li> -->
-                        <li class="list-group-item">Individual<a href="https://drive.google.com/file/d/1mHeXVzJ6FxU8snM32FKT8zj_tnI4Octn/view?usp=sharing" target="_blank">Download</a></li>
-                      </ul>
+                    <div class="download-content">
+                        <h3>Project Proposal</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: March 22, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://drive.google.com/drive/folders/1BrImoJHubeT48b5ifj8dLV_JIrXky5Wo?usp=sharing" target="_blank" class="download-btn">
+                                Download DOC
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Status Document I -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Status Documents -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Status Documents II</h5>
-                        <p class="card-text pt-sm-2">Yet to be submitted, link will be updated soon.</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <!-- <li class="list-group-item">Group<a href="">Download</a></li> -->
-                        <li class="list-group-item">Individual<a href="https://drive.google.com/drive/folders/1Sy3KKNr3sNIyEIZkXSSjQQ9TDXAoZN24?usp=sharing" target="_blank">Download</a></li>
-                      </ul>
+                    <div class="download-content">
+                        <h3>Status Document I</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: July 5, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://drive.google.com/file/d/1mHeXVzJ6FxU8snM32FKT8zj_tnI4Octn/view?usp=sharing" target="_blank" class="download-btn">
+                                Download PDF
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Status Document II -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Research -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Research Paper</h5>
-                        <p class="card-text pt-sm-2">Yet to be submitted, link will be updated soon.</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://drive.google.com/drive/folders/15cRz5yNaYkXsKyF5TdUxpuJ1pLd7B97V?usp=sharing" target="_blank">Download</a></li>
-                      </ul>
+                    <div class="download-content">
+                        <h3>Status Document II</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>In Progress</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://drive.google.com/drive/folders/1Sy3KKNr3sNIyEIZkXSSjQQ9TDXAoZN24?usp=sharing" target="_blank" class="download-btn">
+                                View Files
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Research Paper -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Final Report -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Final Report</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/10/13</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://drive.google.com/drive/folders/1kD5XuSULSgpdUvDAMHJJd_SyDSycwa2c?usp=sharing" target="_blank">Download</a></li>
-                        <li class="list-group-item">Individual<a href="https://drive.google.com/drive/folders/1TWM5u9trQHhLtMiRLJcOzHb1WSbBw6t0?usp=sharing" target="_blank">Download</a></li>
-                      </ul>
+                    <div class="download-content">
+                        <h3>Research Paper</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>In Progress</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://drive.google.com/drive/folders/1BrImoJHubeT48b5ifj8dLV_JIrXky5Wo?usp=sharing" target="_blank" class="download-btn">
+                                View Files
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Final Report -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Poster -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-image mr-2 download-image"></i>Poster</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/10/13</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://drive.google.com/file/d/1uXVaaX4nqiGiqTAj7-JVHlgJ3XlHQQ3h/view?usp=sharing" target="_blank">Download</a></li>
-                      </ul>
+                    <div class="download-content">
+                        <h3>Final Report</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: October 13, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://drive.google.com/drive/folders/1BrImoJHubeT48b5ifj8dLV_JIrXky5Wo?usp=sharing" target="_blank" class="download-btn">
+                                Download PDF
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Poster -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-image"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
+                    <div class="download-content">
+                        <h3>Project Poster</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: October 13, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://drive.google.com/drive/folders/1BrImoJHubeT48b5ifj8dLV_JIrXky5Wo?usp=sharing" target="_blank" class="download-btn">
+                                View Image
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Presentations -->
-            <div id="presentations" class="sub-section">
-                <h2>Presentations</h2>
-                <p>Please find all presentations related this project below.</p>
-                <div class="row mt-sm-5 downloads-container">
-                  <!-- Project Proposal -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Project Proposal</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/03/14</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://docs.google.com/presentation/d/1iwkEDXpi3XPNmHHyt3kwsKJ_mwLwe189/edit?usp=sharing&ouid=110826119005364270755&rtpof=true&sd=true" target="_blank">Download</a></li>
-                      </ul>
+        </div>
+    </section>
+
+    <!-- Presentations -->
+    <section id="presentations" class="main-sections">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Project Deliverables</span>
+                <h2 class="section-title">Presentations</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Access all project presentations and related materials</p>
+            </div>
+            <div class="downloads-grid">
+                <!-- Project Proposal -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-project-diagram"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Progress Presentation I -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Progress Presentation I</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/07/08</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://docs.google.com/presentation/d/1yqgYxUnWUOKHYTps4OPFHP9TXULljojZ/edit?usp=sharing&ouid=110826119005364270755&rtpof=true&sd=true" target="_blank">Download</a></li>
-                      </ul>
+                    <div class="download-content">
+                        <h3>Project Proposal</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: March 22, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn">
+                                Group Presentation
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn mt-2" style="background-color: #6c757d;">
+                                Individual
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
-                  </div>
-                  <!-- Progress Presentation II -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Progress Presentation II</h5>
-                        <p class="card-text pt-sm-2">Submitted on 2021/10/18</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://docs.google.com/presentation/d/1S7m3q_oq1gSP2xm2wiyoJ3-gBXVFcb3K/edit?usp=sharing&ouid=110826119005364270755&rtpof=true&sd=true" target="_blank">Download</a></li>
-                      </ul>
+                </div>
+
+                <!-- Progress Presentation I -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                  </div>
-                  <!-- Final Presentation -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card" >
-                      <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Final Presentation</h5>
-                        <p class="card-text pt-sm-2">Yet to be submitted, link will be updated soon.</p>
-                      </div>
-                      <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="https://drive.google.com/drive/folders/1o2p_otWVavjPy2StceanXwBFqd_w7Yo2?usp=sharing" target="_blank">Download</a></li>
-                      </ul>
+                    <div class="download-content">
+                        <h3>Progress Presentation I</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: July 5, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn">
+                                Group Presentation
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn mt-2" style="background-color: #6c757d;">
+                                Individual
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
-                  </div>
+                </div>
+
+                <!-- Progress Presentation II -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-tasks"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="download-content">
+                        <h3>Progress Presentation II</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: October 13, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn">
+                                Group Presentation
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn mt-2" style="background-color: #6c757d;">
+                                Individual
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Presentation -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-trophy"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="download-content">
+                        <h3>Final Presentation</h3>
+                        <div class="download-meta">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Submitted: November 15, 2021</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn">
+                                Group Presentation
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://docs.google.com/presentation/d/1eW8sX9d6b9YvPZgVJmUfQ4QkX9Z5Y6R7T8U9V0W1A2B3C4D5E6F/edit?usp=sharing" target="_blank" class="download-btn mt-2" style="background-color: #6c757d;">
+                                Individual
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
       </section>
+      <br/><br/><br/>
       <!-- About Us -->
-      <section id="about" class="main-sections " style="background-color:#FDFEFE">
+      <section id="about" class="main-sections" style="background-color: #f8fafc;">
         <div class="container">
-            <h5 class="section-headings">About Us</h5>
-            <div class="sub-section about-us-container ">
-                <h2>Meet Our Team !</h2>
-                <div class="row  mt-sm-5 ">
-                  <!-- Supervisor -->
-                  <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="card about-us-card">
-                      <img src="./Images/dp/supervisor.jpg" class="about-us-image supervisor" alt="Dr. Janaka Wijekoon" height="20%"/>
-                      <div class="card-body">
-                        <h5 class="card-title">Dr. Janaka Wijekoon</h5>
-						</br>
-                        <span class="badge badge-secondary">Supervisor</span>
-                                        <div class="text-group">
-                                            <p>Sri Lanka Institute of Information Technology</p>
-                                        </div>
-                                        <div class="text-group">
-                                            <p><strong>Department</strong></p>
-                                            <p>Information Systems Engineering</p>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a class="card-text mr-4" style="cursor: pointer;" href="https://scholar.google.com/citations?user=tNs_Y7wAAAAJ&hl=en"><i class="fab fa-google mr-2"></i>G-Scholar</a>
-                                            <a class="card-text" style="cursor: pointer;" href="mailto:janaka.w@sliit.lk"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Co Supervisor -->
-                            <div class="col-lg-3 col-md-4 col-sm-12">
-                                <div class="card about-us-card">
-                                    <img src="./Images/dp/cosupervisor.jpg" class="about-us-image cosupervisor" alt="Ms. Dilani Lunugalage" height="20%" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Ms. Dilani Lunugalage</h5>
-                                        </br>
-                                        <span class="badge badge-secondary">Co-Supervisor</span>
-                                        <div class="text-group">
-                                            <p>Sri Lanka Institute of Information Technology</p>
-                                        </div>
-                                        <div class="text-group">
-                                            <p><strong>Department</strong></p>
-                                            <p>Software Engineering</p>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/dilani-lunugalage-84b78433"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
-                                            <a class="card-text" style="cursor: pointer;" href="mailto:dilani.l@sliit.lk"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- external Supervisor -->
-                            <div class="col-lg-3 col-md-4 col-sm-12">
-                                <div class="card about-us-card">
-                                    <img src="./Images/dp/external_supervisor.JPG" class="about-us-image cosupervisor" alt="Dr. Nayanie S Aratchige" height="20%" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Dr. Nayanie S Aratchige</h5>
-                                        </br>
-                                        <span class="badge badge-secondary">External-Supervisor</span>
-                                        <div class="text-group">
-                                            <p>Coconut Research Institute of Sri Lanka</p>
-                                        </div>
-                                        <div class="text-group">
-                                            <p><strong>Division</strong></p>
-                                            <p>Crop Protection</p>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a class="card-text mr-4" style="cursor: pointer;" href="https://scholar.google.com/citations?user=O6UYyJ0AAAAJ&hl=en"><i class="fab fa-google mr-2"></i>G-Scholar</a>
-                                            <a class="card-text" style="cursor: pointer;" href="mailto:nsaratchige@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row  mt-sm-5" style="justify-content: center">
-                            <!-- samitha -->
-                            <div class="col-lg-3 col-md-4 col-sm-12">
-                                <div class="card about-us-card">
-                                    <img src="./Images/dp/samitha.JPG" class="about-us-image " alt="Vidhanaarachchi S.P" height="20%" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Vidhanaarachchi S.P</h5>
-                                        </br>
-                                        <span class="badge badge-secondary">Group Leader</span>
-                                        <div class="text-group">
-                                            <p><strong>Undergraduate</strong></p>
-                                            <p>Sri Lanka Institute of Information Technology</p>
-                                        </div>
-                                        <div class="text-group">
-                                            <p><strong>Department</strong></p>
-                                            <p>Software Engineering</p>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/samitha-vidhana-arachchi"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
-                                            <a class="card-text" style="cursor: pointer;" href="mailto:samithavidhanaarachchi@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Tinali -->
-                            <div class="col-lg-3 col-md-4 col-sm-12">
-                                <div class="card about-us-card">
-                                    <img src="./Images/dp/tinali.jpg" class="about-us-image" alt="Gunasekara R.P.T.I" height="20%" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Gunasekara R.P.T.I</h5>
-                                        </br>
-                                        <span class="badge badge-secondary">Group Member</span>
-                                        <div class="text-group">
-                                            <p><strong>Undergraduate</strong></p>
-                                            <p>Sri Lanka Institute of Information Technology</p>
-                                        </div>
-                                        <div class="text-group">
-                                            <p><strong>Department</strong></p>
-                                            <p>Software Engineering</p>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/tinali-gunasekara-896141179/"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
-                                            <a class="card-text" style="cursor: pointer;" href="mailto:tinaligunasekara@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Gnanod -->
-                            <div class="col-lg-3 col-md-4 col-sm-12">
-                                <div class="card about-us-card">
-                                    <img src="./Images/dp/gnanod.jpg" class="about-us-image" alt="Akalanka P.K.G.C" height="20%" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Akalanka P.K.G.C</h5>
-                                        </br>
-                                        <span class="badge badge-secondary">Group Member</span>
-                                        <div class="text-group">
-                                            <p><strong>Undergraduate</strong></p>
-                                            <p>Sri Lanka Institute of Information Technology</p>
-                                        </div>
-                                        <div class="text-group">
-                                            <p><strong>Department</strong></p>
-                                            <p>Software Engineering</p>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a class="card-text mr-4" style="cursor: pointer;" href="linkedin.com/in/gnanod-chathuramadu-379847130"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
-                                            <a class="card-text" style="cursor: pointer;" href="mailto:gnanodchathuramdu95@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Divyani -->
-                            <div class="col-lg-3 col-md-4 col-sm-12">
-                                <div class="card about-us-card">
-                                    <img src="./Images/dp/divyani.jpg" class="about-us-image" alt="Rajapaksha H.M.U.D" height="20%" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Rajapaksha H.M.U.D</h5>
-                                        </br>
-                                        <span class="badge badge-secondary">Group Member</span>
-                                        <div class="text-group">
-                                            <p><strong>Undergraduate</strong></p>
-                                            <p>Sri Lanka Institute of Information Technology</p>
-                                        </div>
-                                        <div class="text-group">
-                                            <p><strong>Department</strong></p>
-                                            <p>Software Engineering</p>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/divyani-rajapaksha-06b3a6185"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
-                                            <a class="card-text" style="cursor: pointer;" href="mailto:divyanirajapaksha@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+            <div class="section-header text-center mb-5">
+                <h5 class="section-headings">Our Team</h5>
+                <h2 class="section-title">Meet The Team Behind PeakFinder</h2>
+                <p class="section-description">A dedicated team of professionals working together to bring you the best solutions</p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Supervisor -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./Images/dp/supervisor.jpg" alt="Dr. Janaka Wijekoon">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:janaka.w@sliit.lk" class="social-link"><i class="fas fa-envelope"></i></a>
+                            <a href="https://scholar.google.com/citations?user=tNs_Y7wAAAAJ&hl=en" class="social-link" target="_blank"><i class="fab fa-google"></i></a>
                         </div>
                     </div>
+                    <div class="member-info">
+                        <h3>Dr. Janaka Wijekoon</h3>
+                        <p class="role">Project Supervisor</p>
+                        <p class="institution">Senior Lecturer, SLIIT</p>
+                        <p class="department">Information Systems Engineering</p>
+                        <p class="university">Sri Lanka Institute of Information Technology</p>
+                    </div>
                 </div>
-    </section>
+                
+                <!-- Co-Supervisor -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./Images/dp/cosupervisor.jpg" alt="Ms. Dilani Lunugalage">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/dilani-lunugalage-84b78433" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:dilani.l@sliit.lk" class="social-link"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ms. Dilani Lunugalage</h3>
+                        <p class="role">Co-Supervisor</p>
+                        <p class="institution">Lecturer, SLIIT</p>
+                        <p class="department">Software Engineering</p>
+                        <p class="university">Sri Lanka Institute of Information Technology</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./Images/dp/gnanod.jpg" alt="Gnanod Chathuramdu">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/gnanod-chathuramadu-379847130" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:gnanod.2018337@iit.ac.lk" class="social-link"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/Gnanod" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Gnanod Chathuramdu</h3>
+                        <p class="role">Team Leader</p>
+                        <p class="institution">Undergraduate, IIT</p>
+                        <p class="department">Software Engineering</p>
+                        <p class="university">Informatics Institute of Technology</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./Images/dp/akila.jpg" alt="Akila Karunanayake">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/akila-karunanayake-4b4b5b1a5/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:akila.2018357@iit.ac.lk" class="social-link"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/AkilaKarunanayake" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Akila Karunanayake</h3>
+                        <p class="role">Team Member</p>
+                        <p class="institution">Undergraduate, IIT</p>
+                        <p class="department">Software Engineering</p>
+                        <p class="university">Informatics Institute of Technology</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./Images/dp/sasith.jpg" alt="Sasith Weliwita">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sasith-weliwita/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:sasith.2018359@iit.ac.lk" class="social-link"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/SasithWeliwita" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sasith Weliwita</h3>
+                        <p class="role">Team Member</p>
+                        <p class="institution">Undergraduate, IIT</p>
+                        <p class="department">Software Engineering</p>
+                        <p class="university">Informatics Institute of Technology</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./Images/dp/gimhana.jpg" alt="Gimhana Dissanayake">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/gimhanadissanayake/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:gimhana.2018360@iit.ac.lk" class="social-link"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/Gimhanadissanayake" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Gimhana Dissanayake</h3>
+                        <p class="role">Team Member</p>
+                        <p class="institution">Undergraduate, IIT</p>
+                        <p class="department">Software Engineering</p>
+                        <p class="university">Informatics Institute of Technology</p>
+                    </div>
+                </div>
+                
+            
+            </div>
+        </div>
+      </section>
 
-    <!-- Achievements -->
+      <!-- Achievements -->
+      <!-- <section id="achievements" class="main-sections">
     <section id="achievements" class="main-sections">
         <div class="container">
             <h2 class="pb-5 pt-5 text-center  display-5">Achievements</h2>
@@ -898,67 +1132,133 @@
                     in the WSA (World Summit Award) and WSA Youth in 2021.</P>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Promo Banner -->
     <section id="banner" class="main-sections">
-        <div class="promo-banner">
+        <div class="promo-banner" style="background: linear-gradient(135deg, #4caf24 0%, #047fd1 100%); color: white; text-align: center; padding: 6rem 0; overflow: hidden;">
             <div class="container">
-
                 <div class="section-center">
+                    <div class="section-figure mb-4" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="./Images/logo/icon.png" alt="PeakFinder Logo" style="width: 100px; height: auto; transition: transform 0.3s ease;">
+                    </div>
+                </div>
+                <h2 class="mb-3" style="font-size: 2.5rem; font-weight: 700;" data-aos="fade-up" data-aos-delay="200">PeakFinder</h2>
+                <p class="lead mb-4" style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 3rem;" data-aos="fade-up" data-aos-delay="300">
+                    Your ultimate companion for mountain identification and outdoor adventures. Discover peaks, plan your hikes, and explore nature like never before.
+                </p>
+                <div class="section-center" data-aos="fade-up" data-aos-delay="400">
                     <div class="section-figure">
-                        <img src="./Images/back/Icon.png" width="10%" />
+                        <a href="#" class="btn btn-light btn-lg pulse-animation" style="padding: 0.75rem 2rem; border-radius: 30px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+                            <i class="fas fa-download mr-2"></i>Download Now
+                        </a>
                     </div>
                 </div>
-            </div>
-            <h2 class="promo-banner-title">Download Now!</h2>
-            <p class="promo-banner-text">CocoRemedy mobile application is now available for download on Google Play. Click below to get the app now!</p>
-
-            <div class="section-center">
-                <div class="section-figure">
-                    <a href="https://play.google.com/store/apps/details?id=com.bruteforce.cocoremedy"><img src="./Images/back/playstore.png" width="15%"/></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Us -->
-    <section id="contact" class="main-sections" style="background-color:#FDFEFE">
-        <div class="container">
-            <h5 class="section-headings">Contact Us</h5>
-            <div class="sub-section">
-                <h2>Get in Touch</h2>
-                <div class="row  mt-sm-5">
-                    <div class="col-md-6 col-sm-12 contact-form">
-                        <form action="MAILTO:researchcoco@gmail.com" method="POST" enctype="text/plain">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message or Query</label>
-                                <textarea class="form-control" id="message" rows="5"></textarea>
-                            </div>
-                            <button type="submit" class="btn btncolorgradient	">Submit</button>
-                        </form>
-                    </div>
-                    <div class="col-md-6 col-sm-12 contact-details">
-                        <div>
-                            <p><strong>Contact Details</strong></p>
-                            <p>For further queries please reach us at <a href="mailto: researchcoco@gmail.com">researchcoco@gmail.com</a></p>
-                            <p>Hope this project helped you in some manner. Thank you!</p>
-                            <p>-Team CocoRemedy </p>
+                <div class="mt-5" data-aos="fade-up" data-aos-delay="500">
+                    <div class="scroll-indicator">
+                        <span class="scroll-text">Scroll Down</span>
+                        <div class="mouse">
+                            <div class="wheel"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h5 class="section-subtitle">Get In Touch</h5>
+                    <h2 class="section-title">Contact Us</h2>
+                    <div class="section-divider"></div>
+                </div>
+            
+              <div class="contact-wrapper">
+                  <div class="contact-form-container" data-aos="fade-right">
+                      <form id="contactForm" class="contact-form" action="MAILTO:researchcoco@gmail.com" method="POST" enctype="text/plain">
+                          <div class="form-group">
+                              <div class="input-group">
+                                  <input type="text" id="name" name="name" required>
+                                  <label for="name">Your Name</label>
+                                  <div class="input-underline"></div>
+                              </div>
+                          </div>
+                          
+                          <div class="form-group">
+                              <div class="input-group">
+                                  <input type="email" id="email" name="email" required>
+                                  <label for="email">Email Address</label>
+                                  <div class="input-underline"></div>
+                              </div>
+                          </div>
+                          
+                          <div class="form-group">
+                              <div class="input-group">
+                                  <textarea id="message" name="message" rows="4" required></textarea>
+                                  <label for="message">Your Message</label>
+                                  <div class="input-underline"></div>
+                              </div>
+                          </div>
+                          
+                          <button type="submit" class="btn-submit">
+                              <span>Send Message</span>
+                              <i class="fas fa-paper-plane"></i>
+                          </button>
+                      </form>
+                  </div>
+                
+                  <div class="contact-info" data-aos="fade-left">
+                      <div class="contact-card">
+                          <h3>Contact Information</h3>
+                          <p>We'd love to hear from you. Reach out to us for any questions or feedback.</p>
+                          
+                          <div class="contact-method">
+                              <div class="contact-icon">
+                                  <i class="fas fa-envelope"></i>
+                              </div>
+                              <div class="contact-text">
+                                  <h4>Email Us</h4>
+                                  <a href="mailto:researchcoco@gmail.com">researchcoco@gmail.com</a>
+                              </div>
+                          </div>
+                          
+                          <div class="contact-method">
+                              <div class="contact-icon">
+                                  <i class="fas fa-map-marker-alt"></i>
+                              </div>
+                              <div class="contact-text">
+                                  <h4>Location</h4>
+                                  <p>Informatics Institute of Technology, Sri Lanka</p>
+                              </div>
+                          </div>
+                          <div class="social-method">
+                            <h4>Connect With Us</h4>
+                            <div class="contact-method">
+                              <a href="#" class="contact-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="contact-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                              <a href="#" class="contact-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="#" class="contact-icon" aria-label="Github"><i class="fab fa-github"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+        </div>
+    </section>
     <!-- Scripts -->
-    <script src="./lib/jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                easing: 'ease-in-out',
+                mirror: false
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="./lib/fontawesome/js/all.min.js"></script>
     <script src="./lib/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>

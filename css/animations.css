@@ -1,0 +1,79 @@
+/* Pulse animation for download button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/* Scroll indicator animation */
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Hover effects */
+.pulse-animation {
+    transition: all 0.3s ease;
+}
+
+.pulse-animation:hover {
+    animation: pulse 1.5s infinite;
+    transform: translateY(-2px);
+}
+
+/* Scroll indicator styles */
+.scroll-indicator {
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 13px;
+    margin: 10px auto 0;
+    position: relative;
+}
+
+.wheel {
+    display: block;
+    width: 4px;
+    height: 8px;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    animation: scroll 2s infinite;
+}
+
+/* Logo hover effect */
+.section-figure img {
+    transition: transform 0.3s ease;
+}
+
+.section-figure:hover img {
+    transform: scale(1.1) rotate(5deg);
+}

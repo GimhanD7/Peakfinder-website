@@ -1,0 +1,226 @@
+/* Technologies Section */
+.tech-section {
+    padding: 6rem 0;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-section .section-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.tech-section .section-subtitle {
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.tech-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.tech-section .section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.tech-section .section-description {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tech-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #c7d2fe;
+}
+
+.tech-card:hover::before {
+    transform: scaleX(1);
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    background: #f8fafc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e2e8f0;
+}
+
+.tech-card:hover .tech-icon {
+    background: #3b82f6;
+    transform: rotateY(180deg);
+    border-color: #3b82f6;
+}
+
+.tech-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.tech-card h3 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.tech-card:hover h3 {
+    color: #3b82f6;
+}
+
+.tech-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(0deg, rgba(59, 130, 246, 0.9) 0%, rgba(59, 130, 246, 0) 100%);
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.tech-card:hover .tech-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tech-hover p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .tech-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-section {
+        padding: 4rem 0;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .tech-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .tech-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .tech-icon img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+    }
+    
+    .tech-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .tech-hover p {
+        font-size: 0.85rem;
+    }
+}
