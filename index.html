@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./css/technologies.css">
     <link rel="stylesheet" href="./css/research-gap.css">
     <link rel="stylesheet" href="./css/objectives.css">
+    <link rel="stylesheet" href="./css/methodology.css">
+    <link rel="stylesheet" href="./css/literature.css">
+    <link rel="stylesheet" href="./css/research-problem.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -152,102 +155,96 @@
 
     <!-- project-scope -->
     <section id="project-scope" class="main-sections" style="background-color:#FDFEFE">
-        <div class="container">
-            <h5 class="section-headings">Project Scope</h5>
+        <div class=" ">
             <!-- Literature Survey -->
-            <div id="literature" class="sub-section">
-                <h2 class=" ">Literature Survey</h2>
-                <div class="literature-intro mb-5 ">
-                    <p class="lead text-center">Hiking assistance systems have been extensively studied, with early research laying the groundwork for understanding their impact on hiking safety and efficiency [1]. Inspired by structured project management methodologies, modern hiking assistance systems follow a comprehensive approach to navigation, safety, and resource management [2].</p>
+            <section id="literature" class=" ">
+                <div class="container">
+                    <div class=" section-header text-center mb-5 " data-aos="fade-up">
+                        <span class="section-subtitle">Research Insights</span>
+                        <h2 class="section-title">Literature Survey</h2>
+                        <p class="section-description">Hiking assistance systems have evolved significantly, with modern approaches leveraging advanced technologies to enhance safety, navigation, and user experience in outdoor environments.</p>
+                    </div>
+
+                    <div class="literature-cards">
+                        <!-- Card 1: Real-Time Mountain Recognition -->
+                        <div class="literature-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card-header">
+                                <h4><i class="fas fa-mountain"></i>Real-Time Mountain Recognition</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Deep learning, particularly CNNs, has revolutionized geographic feature recognition, offering superior accuracy in classifying natural landscapes compared to traditional methods.</p>
+                                <div class="literature-highlight">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>MobileNetV2's efficient architecture makes it ideal for real-time mobile applications, performing comparably to larger models while being optimized for low-power devices.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Geolocation and Mapping -->
+                        <div class="literature-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card-header">
+                                <h4><i class="fas fa-map-marked-alt"></i>Geolocation and Mapping</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Modern applications leverage interactive maps with real-time trail recognition and collective mapping features, enhanced by React Native, Firebase, and Google APIs.</p>
+                                <div class="literature-highlight">
+                                    <i class="fas fa-route"></i>
+                                    <span>Enhanced route-sharing capabilities and real-time trail updates significantly improve user collaboration and trail management.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Geospatial Data Analysis -->
+                        <div class="literature-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card-header">
+                                <h4><i class="fas fa-chart-line"></i>Geospatial Data Analysis</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>LSTM networks have improved travel time estimation by accounting for terrain, weather, and hiker fitness levels, offering more accurate predictions than traditional approaches.</p>
+                                <div class="literature-highlight">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Integration of real-time environmental data enhances prediction accuracy for hiking duration and difficulty.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: WiFi Mesh Networks -->
+                        <div class="literature-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card-header">
+                                <h4><i class="fas fa-wifi"></i>WiFi Mesh Networks</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Decentralized Wi-Fi mesh networks provide reliable communication in remote areas, enabling real-time hazard reporting and route sharing.</p>
+                                <div class="literature-highlight">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span>ESP32 modules ensure robust connectivity in rugged environments, enhancing hiker safety and experience.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- References -->
+                        <div class="references" data-aos="fade-up" data-aos-delay="500">
+                            <h5>References</h5>
+                            <ol class="reference-list">
+                                <li>Kerzner, H. (2017). Project Management: A Systems Approach to Planning, Scheduling, and Controlling. Wiley.</li>
+                                <li>Zhang, Y., & Li, X. (2022). "Deep Learning for Geographic Feature Recognition." Geospatial Intelligence Review, 18(3), 112-129.</li>
+                                <li>Sandler, M., et al. (2018). "MobileNetV2: Inverted Residuals and Linear Bottlenecks." CVPR.</li>
+                                <li>Chen, X., & Kwan, M. P. (2020). "Multi-objective route planning for hiking based on crowdsourced data." Transactions in GIS, 24(3).</li>
+                                <li>Hochreiter, S., & Schmidhuber, J. (1997). "Long short-term memory." Neural computation, 9(8), 1735-1780.</li>
+                                <li>Baccelli, E., et al. (2019). "RIOT: An Open Source OS for IoT." IEEE IoT Journal, 5(6), 4428-4440.</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="literature-cards">
-                    <!-- Card 1: Real-Time Mountain Recognition -->
-                    <div class="card literature-card mb-4">
-                        <div class="card-header">
-                            <h4><i class="fas fa-mountain mr-2"></i>Real-Time Mountain Recognition</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>Deep learning, particularly Convolutional Neural Networks (CNNs), has revolutionized geographic feature recognition, offering superior accuracy in classifying natural landscapes compared to traditional methods like SIFT and SURF [3]. MobileNetV2's efficient architecture, featuring depth-wise separable convolutions, makes it ideal for real-time mobile applications, performing comparably to larger models while being optimized for low-power devices [4].</p>
-                            <div class="literature-highlight">
-                                <i class="fas fa-lightbulb"></i>
-                                <span>Transfer learning with pre-trained models like MobileNetV2 significantly enhances classification accuracy for specialized tasks, reducing the need for large datasets [5][6].</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Geolocation and Mapping -->
-                    <div class="card literature-card mb-4">
-                        <div class="card-header">
-                            <h4><i class="fas fa-map-marked-alt mr-2"></i>Geolocation and Mapping</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>Modern hiking applications leverage interactive maps with real-time trail recognition and collective mapping features [7]. The integration of React Native for front-end development, Firebase for real-time data management, and Google APIs provides a scalable platform for building responsive mapping applications [8][9].</p>
-                            <div class="literature-highlight">
-                                <i class="fas fa-route"></i>
-                                <span>Enhanced route-sharing capabilities and real-time trail updates significantly improve user collaboration and trail management [10].</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Geospatial Data Analysis -->
-                    <div class="card literature-card mb-4">
-                        <div class="card-header">
-                            <h4><i class="fas fa-chart-line mr-2"></i>Geospatial Data Analysis</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>Advanced machine learning models, particularly LSTM networks, have significantly improved travel time estimation by accounting for variables like terrain, weather, and hiker fitness levels [11]. These models dynamically compute journey times using real-time parameters, offering more accurate predictions than traditional rule-based approaches like Naismith's Rule [12].</p>
-                            <div class="literature-highlight">
-                                <i class="fas fa-clock"></i>
-                                <span>Integration of real-time environmental data and user-specific parameters enhances prediction accuracy for hiking duration and difficulty [13].</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: WiFi Mesh Networks -->
-                    <div class="card literature-card mb-4">
-                        <div class="card-header">
-                            <h4><i class="fas fa-wifi mr-2"></i>WiFi Mesh Networks</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>Decentralized Wi-Fi mesh networks provide reliable communication in remote areas, enabling real-time hazard reporting and route sharing [14]. The use of ESP32 modules with enhanced processing power and signal strength ensures robust connectivity in rugged environments [15].</p>
-                            <div class="literature-highlight">
-                                <i class="fas fa-network-wired"></i>
-                                <span>Mesh networks offer a scalable solution for maintaining connectivity in areas with minimal infrastructure, enhancing hiker safety and experience [16].</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="references   card literature-card mb-4">
-                      <h5 class="mb-8">References</h5>
-                      <ol class="reference-list">
-                          <li>Kerzner, H. (2017). Project Management: A Systems Approach to Planning, Scheduling, and Controlling. Wiley.</li>
-                          <li>Miller, A., & Brown, T. (2021). "Modern Approaches to Hiking Assistance Systems." Journal of Outdoor Recreation, 34(2), 78-95.</li>
-                          <li>Zhang, Y., & Li, X. (2022). "Deep Learning for Geographic Feature Recognition: A Comparative Study." Geospatial Intelligence Review, 18(3), 112-129.</li>
-                          <li>Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L. C. (2018). "MobileNetV2: Inverted Residuals and Linear Bottlenecks." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 4510-4520).</li>
-                          <li>Weiss, K., Khoshgoftaar, T. M., & Wang, D. (2016). "A survey of transfer learning." Journal of Big Data, 3(1), 9.</li>
-                          <li>Tan, M., & Le, Q. (2019). "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks." In International Conference on Machine Learning (pp. 6105-6114).</li>
-                          <li>Wilson, J. P. (2018). "The use of mobile applications in outdoor recreation." Journal of Outdoor Recreation and Tourism, 21, 1-8.</li>
-                          <li>Google Developers. (2023). "Maps Platform." Retrieved from https://developers.google.com/maps</li>
-                          <li>Firebase. (2023). "Realtime Database." Retrieved from https://firebase.google.com/docs/database</li>
-                          <li>Chen, X., & Kwan, M. P. (2020). "Multi-objective route planning for hiking based on crowdsourced data." Transactions in GIS, 24(3), 622-641.</li>
-                          <li>Hochreiter, S., & Schmidhuber, J. (1997). "Long short-term memory." Neural computation, 9(8), 1735-1780.</li>
-                          <li>Naismith, W. W. (1892). "A Method of Determining the Proper Walking Expedition." Scottish Mountaineering Club Journal, 2(4), 125-126.</li>
-                          <li>Kang, J. Y. M., & Gretzel, U. (2021). "Effects of GPS-supported real-time information on hiking experience." Current Issues in Tourism, 24(6), 761-776.</li>
-                          <li>Baccelli, E., Gündoğan, C., Hahm, O., Kietzmann, P., Lenders, M. S., Petersen, H., ... & Wählisch, M. (2019). "RIOT: An Open Source Operating System for Low-end Embedded Devices in the IoT." IEEE Internet of Things Journal, 5(6), 4428-4440.</li>
-                          <li>Espressif Systems. (2023). "ESP32 Series Datasheet." Retrieved from https://www.espressif.com/en/products/socs/esp32</li>
-                          <li>Reynders, B., & Pollin, S. (2016). "Chirp spread spectrum as a modulation technique for long range communication." In 2016 Symposium on Communications and Vehicular Technologies (SCVT) (pp. 1-6). IEEE.</li>
-                      </ol>
-                  </div>
-              </div>
-                </div>
+            </section>
 
                
             <!-- Research Gap -->
             <section id="research_gap" class="research-gap-section">
               <div class="container">
-                <div class="section-header text-center mb-5" data-aos="fade-up">
-                  <h5 class="section-subtitle">Our Research</h5>
+                <div class=" section-header text-center mb-5 " data-aos="fade-up">
+                  <span class="section-subtitle" style="color: #E9F7EF; ">Our Research</span>
+                  
                   <h2 class="section-title">Research Gap Analysis</h2>
                   <!-- <div class="section-divider"></div> -->
                   <p class="section-description">Key challenges and opportunities identified in current coconut disease research</p>
@@ -297,32 +294,47 @@
             </section>
           </div>
             <!-- Research Problem -->
-            <div id="research_problem" class="sub-section">
-              <h2>Research Problem & Solution</h2>
-			   <div class="row">
-                <div id="project-scope-left" class="col-md-6 col-sm-12 pt-lg-5 justify-text">
-                 <h5><strong>Proposed Problem</strong></h5>
-				 </br>
-					<h4 class="highlight">How to classify pest and diseases in coconut and provide surveillance to people in real time?</h4>
-					<p></p>
-					<p style="text-align: justify;">Weligama Coconut Leaf Wilt Disease (WCLWD) and Coconut Caterpillar Infestation (CCI) are the most threatening disease and pest of coconut in Sri Lanka. Due to WCLWD about 300,000 palms were removed and an estimated 60,000 palms needed to be identified for removal. An economical yield loss will result if more than 30% defoliation is caused due to CCI. For efficient management of WCLWD and CCI, identification at an early stage and effective communication of growers and professionals is needed.</p>
-				</br>
-				</div>
-
-				<div id="project-scope-right" class="col-md-6 col-sm-12 pt-lg-5">
-                  <div class="section-left">
-                    <div class="section-figure">
-                      <iframe width="100%" height="315" src="https://www.youtube.com/embed/3myik4zPU2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      <p>Product Demonstration - Solution</p>
+            <section id="research_problem" class="research-problem-section">
+                <div class="container">
+                    <div class="research-problem-header">
+                        <span class="section-subtitle">Research Focus</span>
+                        <h2 class="section-title">Research Problem & Solution</h2>
                     </div>
-                  </div>
+                    
+                    <div class="research-problem-content">
+                        <div class="problem-statement">
+                            <h3>Understanding the Challenge</h3>
+                            <div class="highlight-box">
+                                <h4>How can we accurately classify pests and diseases in coconut palms and provide real-time surveillance to stakeholders?</h4>
+                                <p>Addressing the critical challenges in coconut cultivation through advanced technological solutions.</p>
+                            </div>
+                            <p>Weligama Coconut Leaf Wilt Disease (WCLWD) and Coconut Caterpillar Infestation (CCI) are among the most severe threats to coconut cultivation in Sri Lanka. The impact is staggering, with approximately 300,000 palms already removed due to WCLWD and an additional 60,000 requiring identification for removal. The situation is further complicated by CCI, where defoliation exceeding 30% leads to significant economic losses. The key to effective management lies in early identification and establishing efficient communication channels between growers and agricultural professionals.</p>
+                        </div>
+                        
+                        <div class="solution-section">
+                            <h3>Our Innovative Solution</h3>
+                            <div class="solution-content">
+                                <div class="solution-text">
+                                    <p>PeakFinder introduces a comprehensive mobile and web-based platform designed to combat WCLWD and CCI through cutting-edge technology. Our solution addresses the critical challenge of accurate disease identification by implementing advanced Deep Learning techniques, specifically Convolutional Neural Networks (CNN), to analyze leaf symptoms with unprecedented precision.</p>
+                                    
+                                    <p>The platform serves a wide range of stakeholders, including coconut growers, estate managers, researchers at the Coconut Research Institute (CRISL), and Coconut Development Officers (CDOs). By simply capturing a photograph of affected leaves, users can instantly receive accurate diagnoses, while our system automatically extracts geolocation data to create a comprehensive disease tracking network.</p>
+                                    
+                                    <p>For WCLWD, our system evaluates multiple symptoms to calculate disease severity, while for CCI, we employ sophisticated computer vision techniques including OpenCV and YOLO object detection to count caterpillars and assess infestation levels. The integration of MASK R-CNN enables precise calculation of infected areas, providing valuable data for progression analysis.</p>
+                                    
+                                    <p>Our real-time notification system ensures immediate alerts for detected infections, enabling rapid response from agricultural authorities. The platform's mapping capabilities visualize infection patterns and predict potential risk zones, empowering proactive measures to protect unaffected areas. This comprehensive approach not only addresses current infections but also works to prevent future outbreaks through data-driven insights and early warning systems.</p>
+                                </div>
+                                
+                                <!-- <div class="solution-media">
+                                    <div class="media-container">
+                                        <iframe src="https://www.youtube.com/embed/3myik4zPU2s" title="PeakFinder Solution Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="media-caption">Product Demonstration - See our solution in action</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-			     <div>
-				 <h5><strong>Proposed Solution</strong></h5>
-				 </br>
-				 <p style="text-align: justify;"> Coco Remedy uses mobile and web-based software to manage Weligama Coconut Leaf Wilt Disease (WCLWD) and Coconut Caterpillar Infestation (CCI), which devastate coconut cultivation. In WCLWD, yellowing of leaves which also associates with Magnesium deficiency makes it difficult to distinguish the diseased palms accurately. Similarly, the dried appearance of leaves due to CCI is difficult to distinguish from leaf scorching. Therefore, Deep Learning techniques like Convolutional Neural Networks (CNN) for feature extraction will be used to identify the diseases accurately. Coconut growers, Estate managers of plantation companies, Researches of Coconut Research Institute (CRISL), Coconut Development Officers (CDOs) of Coconut Cultivation Board (CCB), and the general public will be able to identify diseased palm accurately by capturing a photograph of leaf with symptoms. The location will be extracted by Geo Tags in order to gather anonymous data using OpenWeatherMapAPI for future predictions. The severity of WCLWD is calculated based on the multiple symptoms using CNN. Since caterpillars’ associates with the damaged leaves in CCI, counts of caterpillars are taken using OpenCV / YOLO object detection while the infected area is calculated using MASK R-CNN. Using the above-mentioned parameters progression level is determined. Real-time notifications are sent whenever an infected tree is found. Details of the infected trees, location and severity records enable the researches and CDOs to take remedial actions. Infected areas and danger zones which might be affected in the future can visualized through Google mapping technologies. Nearby users are notified to take precautions before their lands get affected.	</P>
-                </div>
+            </section>
           </div>
             <!-- Research Objectives -->
       <section id="research_objectives" class="objectives-section">
@@ -374,36 +386,48 @@
         </div>
       </section>
             <!-- Methodology -->
-            <div id="methodology" class="sub-section">
-              <h2>Methodology</h2>
-              <div class="row">
-                <div id="project-scope-left" class="col-md-6 col-sm-12 pt-lg-5">
-                  <div class="section-left">
-                    <div class="section-figure">
-                      <img src="./Images/other/architecture.jpg" width="100%"/>
-                      <p>Figure 2. High Level Architecture of the system.</p>
+            <section id="methodology" class="methodology-section">
+                <div class="container">
+                    <div class="methodology-header" data-aos="fade-up">
+                        <span class="section-subtitle">Our Process</span>
+                        <h2 class="section-title">Methodology</h2>
+                        <p class="section-description">A systematic approach to solving the coconut disease identification challenge through advanced technology and innovative solutions</p>
                     </div>
-                  </div>
+                    
+                    <div class="row">
+                        <!-- Left Column - Architecture Diagram -->
+                        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                            <div class="architecture-container">
+                                <div class=" ">
+                                    <img src="./Images/architecture.png" alt="Architecture Diagram">
+                                    <!-- <i class="fas fa-project-diagram"></i> -->
+                                    <div class="architecture-caption">Figure 2. High Level Architecture of the system</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column - Methodology Steps -->
+                        <div class="col-lg-6">
+                            <div class="methodology-content">
+                                <div class="methodology-steps">
+                                    <div class="step" data-aos="fade-left" data-aos-delay="100">
+                                        <!-- <div class="step-number">1</div> -->
+                                        <h3>Image Acquisition</h3>
+                                        <p>Users capture or upload images of suspicious coconut leaves through our mobile or web application. The system supports various image formats and provides guidance for optimal image capture.</p>
+                                    </div>
+                                    
+                                    <!--  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="project-scope-right" class="col-md-6 col-sm-12 pt-lg-5 justify-text">
-                  <p>The proposed pest and disease Surveillance system consists of 4 main components. They are;</p>
-                  <ol>
-                    <li><strong>WCLWD and its symptom severity identification</strong></li>
-                    <li><strong>CCI Identification and progression level determination</strong></li>
-                    <li><strong>Deficiency Identification (Mg deficiency and Leaf Scorch Decline)</strong></li>
-					<li><strong>Water resource identification</strong></li>
-                    <li><strong>Crowdsourcing for information sharing.</strong></li>
-                  </ol>
-				  <p> Fig 4 illustrates the overall system diagram of the proposed solution which was intended to provide a smart approach for stakeholders, researchers, and Coconut Development Officers (CDOs) to detect the coconut diseases and pest infestations that may affect the coconut industry. As shown in the diagram, the registered users of the system can capture or upload the images which are suspicious. The images are sent to the Amazon Web Services (AWS) backend server where the flask server is deployed. These images are processed in the flask server by the designed DCNN models for disease identification. If WCLWD is found, the symptom severity will be determined using CNN models. Simultaneously, if CCI is identified, the images will go through the Mask-R-CNN model to determine the progression level while the number of caterpillars are extracted using the YOLOv5 object detection algorithm. Images will be classified using the CNN models of Mg deficiency and LSD at the same time.</p>
-				  <p>Once the system identifies that the leaves are infected, then the response will be captured by the crowdsourcing platform. The Google Map will be updated with the real time locations (latitude and longitude) of the infected palms. In Addition, the system will automatically send notifications to the farmers and other stakeholders who are at the risk of infection.</p>
-                </div>
-              </div>
-          </div>
+            </section>
             <!-- Technologies Used -->
             <section id="tech_used" class="tech-section">
               <div class="container">
                 <div class="section-header text-center mb-5" data-aos="fade-up">
-                  <h5 class="section-subtitle">Our Tech Stack</h5>
+                  <h5 class="section-subtitle" style="color: #ffffff;">Our Tech Stack</h5>
                   <h2 class="section-title">Technologies We Use</h2>
                   <!-- <div class="section-divider"></div> -->
                   <p class="section-description">We leverage cutting-edge technologies to deliver high-performance solutions</p>

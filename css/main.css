@@ -182,8 +182,8 @@ html {
     overflow: hidden;
     --primary-color: #3b82f6;
     --secondary-color: #10b981;
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
+    --text-primary: #4fd600;
+    --text-secondary: #006aff;
     --bg-light: #f8fafc;
     --bg-lighter: #f0f9ff;
     --card-bg: rgba(255, 255, 255, 0.95);
@@ -223,16 +223,16 @@ html {
     transform: translateX(-50%);
 }
 
-#literature h2::after {
+/* #literature h2::after {
     content: '';
     position: absolute;
     bottom: -12px;
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #3b82f6, #10b981);
+    background: linear-gradient(90deg, #88ff00, #00ffaa);
     border-radius: 2px;
-}
+} */
 
 .literature-intro {
     max-width: 900px;
@@ -492,7 +492,7 @@ text-align: center;
 }
 
 .section-subtitle {
-color: #3b82f6;
+color: #ffffff;
 font-size: 1.1rem;
 font-weight: 600;
 text-transform: uppercase;
