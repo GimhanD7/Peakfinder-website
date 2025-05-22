@@ -1,0 +1,258 @@
+/* Milestones Section */
+#milestones {
+    padding: 6rem 0;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+#milestones .section-subtitle {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1);
+}
+
+#milestones .section-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1.5rem;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #4f46e5, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#milestones .section-description {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #e2e8f0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 4rem;
+    clear: both;
+}
+
+.timeline-event:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-event-icon {
+    width: 24px;
+    height: 24px;
+    background: #4f46e5;
+    border: 4px solid #f8fafc;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -12px;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+    transition: all 0.3s ease;
+}
+
+.timeline-event:hover .timeline-event-icon {
+    transform: scale(1.2);
+    background: #3730a3;
+    box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.3);
+}
+
+.timeline-event-copy {
+    width: calc(50% - 40px);
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-event:nth-child(odd) .timeline-event-copy {
+    float: left;
+    margin-right: 40px;
+}
+
+.timeline-event:nth-child(even) .timeline-event-copy {
+    float: right;
+    margin-left: 40px;
+}
+
+.timeline-event-copy::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline-event:nth-child(odd) .timeline-event-copy::after {
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.timeline-event:nth-child(even) .timeline-event-copy::after {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.timeline-event:hover .timeline-event-copy {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-event-thumbnail {
+    color: #4f46e5;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.timeline-event h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+}
+
+.timeline-event p {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Progress Bar */
+.progress {
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4f46e5, #818cf8);
+    transition: width 0.6s ease;
+    position: relative;
+    overflow: hidden;
+    padding-right: 8px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0.2) 0%, 
+        rgba(255,255,255,0.4) 50%, 
+        rgba(255,255,255,0.2) 100%);
+    background-size: 200% 100%;
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Remove Bootstrap's default progress bar styles */
+.bg-success {
+    background: linear-gradient(90deg, #10b981, #34d399) !important;
+}
+
+.bg-infinity-primary {
+    background: linear-gradient(90deg, #4f46e5, #818cf8) !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-event {
+        margin-bottom: 2.5rem;
+    }
+    
+    .timeline-event-icon {
+        left: 20px;
+        margin-left: 0;
+    }
+    
+    .timeline-event-copy {
+        width: calc(100% - 80px);
+        float: right !important;
+        margin: 0 0 0 60px !important;
+    }
+    
+    .timeline-event-copy::after {
+        left: -10px !important;
+        right: auto !important;
+        border-width: 10px 10px 10px 0 !important;
+        border-color: transparent white transparent transparent !important;
+    }
+    
+    #milestones .sub-section h2 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-event-copy {
+        width: calc(100% - 60px);
+        padding: 1.25rem;
+    }
+    
+    .timeline-event h3 {
+        font-size: 1.3rem;
+    }
+}
