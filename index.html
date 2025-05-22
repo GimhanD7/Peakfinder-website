@@ -201,7 +201,8 @@
                                 <h4><i class="fas fa-chart-line"></i>Geospatial Data Analysis</h4>
                             </div>
                             <div class="card-body">
-                                <p>LSTM networks have improved travel time estimation by accounting for terrain, weather, and hiker fitness levels, offering more accurate predictions than traditional approaches.</p>
+                                <p>Develop predictive models that incorporate real-time data such as weather, trail conditions, elevation and difficulty of trail and leveraging machine learning to improve the accuracy of travel time estimates based on historical data and user feedback.
+</p>
                                 <div class="literature-highlight">
                                     <i class="fas fa-clock"></i>
                                     <span>Integration of real-time environmental data enhances prediction accuracy for hiking duration and difficulty.</span>
@@ -248,7 +249,7 @@
                   
                   <h2 class="section-title">Research Gap Analysis</h2>
                   <!-- <div class="section-divider"></div> -->
-                  <p class="section-description">Key challenges and opportunities identified in current coconut disease research</p>
+                  <p class="section-description">Despite global advancements in AI and geospatial technologies, there are key gaps in adapting these innovations to Sri Lanka’s unique hiking environments</p>
                 </div>
                 
                 <div class="gap-grid">
@@ -258,11 +259,13 @@
                       <i class="fas fa-search"></i>
                       <div class="icon-bg"></div>
                     </div>
-                    <h3>Identification & Classification</h3>
+                    <h3>1.  Limited Local CNN Models for Sri Lankan Mountain Recognition</h3>
                     <div class="gap-content">
-                      <p>There are no records of a smart solution for coconut pest and disease identification and classification in Sri Lanka. Symptoms of coconut disorders show similar characteristic appearance making accurate identification challenging.</p>
+                      <p>
+                    There is currently no CNN-based model trained on Sri Lankan mountain data, making global image recognition tools ineffective for local use. The lack of region-specific datasets and offline capability creates a major gap in real-time mountain identification tailored to Sri Lanka’s hiking environment.</p>
                     </div>
                     <div class="gap-number">01</div>
+                    
                   </div>
                   
                   <!-- Gap Item 2 -->
@@ -271,9 +274,9 @@
                       <i class="fas fa-chart-line"></i>
                       <div class="icon-bg"></div>
                     </div>
-                    <h3>Severity Assessment</h3>
+                    <h3>Inadequate Trail Mapping for Local Hiking Conditions</h3>
                     <div class="gap-content">
-                      <p>While smart solutions for identifying some coconut pests and diseases exist in India, comprehensive assessment of disease severity and progression levels of pest damage remains unaddressed in current research.</p>
+                      <p>Current hiking apps lack features like real-time updates, community collaboration, and offline access, making them unsuitable for Sri Lanka’s remote and low-connectivity trails. This highlights the need for a locally adapted, collaborative mapping system that can dynamically reflect changing trail conditions and function without constant internet access.</p>
                     </div>
                     <div class="gap-number">02</div>
                   </div>
@@ -284,12 +287,24 @@
                       <i class="fas fa-comments"></i>
                       <div class="icon-bg"></div>
                     </div>
-                    <h3>Information Sharing</h3>
+                    <h3>Lack of Personalized and Context-Aware Travel Time Estimation</h3>
                     <div class="gap-content">
-                      <p>There's a critical need for real-time communication systems to facilitate information sharing between coconut growers, extension personnel, and researchers for more effective pest and disease control strategies.</p>
+                      <p>Existing travel time models are generic and fail to account for Sri Lanka’s varied terrains, weather, and individual hiker differences. There are no AI-based or behavior-driven models locally that use real-time data to predict hiking time and distance, creating a major gap in providing accurate, personalized route planning and ensuring hiker safety.</p>
                     </div>
                     <div class="gap-number">03</div>
                   </div>
+
+                    <!-- Gap Item 4 -->
+                    <div class="gap-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="gap-icon">
+                            <i class="fas fa-network-wired"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h3> Absence of Reliable Off-Grid Emergency Communication Systems</h3>
+                        <div class="gap-content">
+                            <p>Current emergency systems rely on mobile networks, which are often unavailable in Sri Lanka’s remote hiking areas. Although low-cost solutions like Wi-Fi mesh networks exist, they haven’t been implemented or adapted for local hiking conditions. This creates a critical safety gap, leaving hikers without reliable communication during emergencies.</p>
+                        </div>
+                        <div class="gap-number">04</div>
                 </div>
               </div>
             </section>
@@ -351,8 +366,8 @@
             <!-- Objective 1 -->
             <div class="objective-container left" data-aos="fade-right">
               <div class="objective-content">
-                <h3>Classification of Weligama Coconut Leaf Wilt Disease</h3>
-                <p>The first objective is to classify Weligama Coconut Leaf Wilt Disease (WCLWD) to provide a solution for distinguishing WCLWD uneven yellowing from other diseases. In addition, the symptom severity of WCLWD was determined using a Convolutional Neural Network to identify the disease's symptom severity level to inform the Coconut Research Institute of Sri Lanka (CRISL) to proceed with the necessary precautions to reduce the dispersion rate.</p>
+                <h3>Development of a Real-Time Mountain Recognition System </h3>
+                <p>The project aims to develop a real-time mountain recognition system for Sri Lanka using deep learning, specifically the MobileNetV2 model, optimized for mobile devices. Users can point their smartphones at a mountain to instantly receive its name, history, and other relevant details. This mobile application is designed to enhance the hiking experience for hikers, tourists, and students by providing interactive, hands-free educational information without relying on manual input or GPS.</p>
               </div>
               <div class="objective-number">01</div>
             </div>
@@ -360,8 +375,8 @@
             <!-- Objective 2 -->
             <div class="objective-container right" data-aos="fade-left">
               <div class="objective-content">
-                <h3>Classification of Coconut Caterpillar Infestation</h3>
-                <p>The second objective of this study is to develop a solution to identify the coconut caterpillar infestation (CCI) while differentiating its symptoms from other conditions. The severity of the infestation will also be determined at the same time, and appropriate authorities will be notified in order to expedite the application of control measures to prevent possible outbreak of the pest.</p>
+                <h3>Geolocation and Mapping System Development</h3>
+                <p>The second objective is to develop an interactive mapping system tailored for hikers, featuring detailed trail maps, terrain types, POIs, and real-time updates. It will support route sharing and collaborative mapping, enabling users to contribute and update trail information. The system will also provide personalized hiking recommendations based on user preferences and environmental data. Real-time integration of weather, hazards, and trail conditions will ensure safer and more informed hiking experiences, especially in remote areas.</p>
               </div>
               <div class="objective-number">02</div>
             </div>
@@ -369,8 +384,8 @@
             <!-- Objective 3 -->
             <div class="objective-container left" data-aos="fade-right">
               <div class="objective-content">
-                <h3>Deficiency & Resource Identification</h3>
-                <p>The third objective is identifying the pattern of yellowing associated with Mg deficiency, identifying LSD on coconut leaves, and checking whether there is a water resource within 100m from the farmers' to facilitate constant monitoring to prevent caterpillar outbreaks.</p>
+                <h3>Geospatial Data Analysis for Distance and Travel Time Estimation</h3>
+                <p>The third objective is to implement geospatial data analysis to accurately estimate hiking distance and travel time based on real-time environmental conditions, terrain, and user-specific factors like fitness, experience, and equipment load. Unlike traditional static models, this system will use predictive machine learning algorithms to deliver dynamic, personalized travel time estimates. It will continuously improve by learning from user feedback and new data, ensuring more precise predictions over time.</p>
               </div>
               <div class="objective-number">03</div>
             </div>
@@ -378,8 +393,8 @@
             <!-- Objective 4 -->
             <div class="objective-container right" data-aos="fade-left">
               <div class="objective-content">
-                <h3>Crowdsourcing for Information Sharing</h3>
-                <p>The fourth objective is to provide a convenient approach to the farmers and industry professionals to utilize the optimal use of the platform by visualizing the disease dispersions and notifying the stakeholders regarding the dispersions with their severity levels.</p>
+                <h3>Wi-Fi Mesh Networks for Hiking Systems</h3>
+                <p>The fourth objective is to develop a Wi-Fi mesh network protocol for hikers, enabling device-to-device communication in remote areas without internet or mobile networks. This ad-hoc network will support emergency alerts like SOS signals, prioritize low-latency and self-healing capabilities, and adapt to changing terrain. The system will be tested across various environments to ensure reliability, ultimately enhancing safety and communication during hiking expeditions.</p>
               </div>
               <div class="objective-number">04</div>
             </div>
@@ -392,7 +407,7 @@
                     <div class="methodology-header" data-aos="fade-up">
                         <span class="section-subtitle">Our Process</span>
                         <h2 class="section-title">Methodology</h2>
-                        <p class="section-description">A systematic approach to solving the coconut disease identification challenge through advanced technology and innovative solutions</p>
+                        <p class="section-description">A comprehensive, modular approach integrating deep learning for mountain recognition, interactive mapping, geospatial prediction models, and Wi-Fi mesh communication to deliver a real-time, intelligent hiking assistance system.</p>
                     </div>
                     
                     <div class="row">
@@ -413,8 +428,35 @@
                                 <div class="methodology-steps">
                                     <div class="step" data-aos="fade-left" data-aos-delay="100">
                                         <!-- <div class="step-number">1</div> -->
-                                        <h3>Image Acquisition</h3>
-                                        <p>Users capture or upload images of suspicious coconut leaves through our mobile or web application. The system supports various image formats and provides guidance for optimal image capture.</p>
+                                        
+                                        <p>This research adopted a <strong>mixed-methods approach</strong> combining experimental prototype development with both qualitative and quantitative evaluations. The system was modularized into four functional components to address the comprehensive requirements of the proposed <strong>Hiking Assistance System (HAS)</strong>:</p>
+
+                                            <ul>
+                                                <li>Real-Time Mountain Recognition</li>
+                                                <li>Geolocation and Mapping</li>
+                                                <li>Geospatial Data Analysis</li>
+                                                <li>Wireless Mesh Communication</li>
+                                            </ul>
+
+                                            <section>
+                                                <h3>A. Real-Time Mountain Recognition</h3>
+                                                <p>A MobileNetV2 model was trained on curated and augmented Sri Lankan mountain images. The model was optimized using the Adam optimizer and deployed via Flask API, integrated with a React Native frontend. Performance was validated using accuracy, precision, recall, and confusion matrix.</p>
+                                            </section>
+
+                                            <section>
+                                                <h3>B. Geolocation and Mapping</h3>
+                                                <p>An interactive map was built using React Native, Firebase, and Google Maps API. It features route planning, real-time trail updates, and collaborative mapping. A modified Dijkstra’s algorithm determines optimal paths based on trail data and user inputs.</p>
+                                            </section>
+
+                                            <section>
+                                                <h3>C. Geospatial Data Analysis</h3>
+                                                <p>Environmental and user-specific data were collected and processed. Machine learning models were evaluated, with the Random Forest Regressor selected for its accuracy. Integrated with OpenWeather API, the model provides dynamic predictions of hiking distance and time.</p>
+                                            </section>
+
+                                            <section>
+                                                <h3>D. Wireless Mesh Communication Network</h3>
+                                                <p>A Wi-Fi mesh network was built using ESP8266/ESP32 NodeMCU devices for peer-to-peer communication in remote areas. The network enables low-latency emergency alerts and is self-healing to maintain functionality in rugged environments. Firebase was used for data syncing.</p>
+                                            </section>
                                     </div>
                                     
                                     <!--  -->
@@ -1251,5 +1293,5 @@
     <script src="./js/scroll.js"></script>
     <script src="./js/objectives.js"></script>
 </body>
-
+///////////////////////
 </html>
