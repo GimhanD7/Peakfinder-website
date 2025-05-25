@@ -1951,16 +1951,10 @@ a {
 }
 
 .timeline-event-thumbnail {
-    -webkit-transition: box-shadow 0.5s ease-in;
-    -webkit-transition-delay: 0.1s;
-    -webkit-transition: -webkit-box-shadow 0.5s ease-in 0.1s;
-    transition: -webkit-box-shadow 0.5s ease-in 0.1s;
     transition: box-shadow 0.5s ease-in 0.1s;
-    transition: box-shadow 0.5s ease-in 0.1s, -webkit-box-shadow 0.5s ease-in 0.1s;
     color: white;
     font-size: 0.75em;
     background-color: black;
-    -webkit-box-shadow: inset 0 0 0 0em #ef795a;
     box-shadow: inset 0 0 0 0em #ef795a;
     display: inline-block;
     margin-bottom: 1.2em;
